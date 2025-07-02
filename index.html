@@ -1,93 +1,133 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logic Color Challenge – Play Now!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Trading Offer</title>
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #fdfbfb, #ebedee);
+    * { box-sizing: border-box; }
+    body, html {
       margin: 0;
       padding: 0;
-      color: #333;
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.7);
     }
     .container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       text-align: center;
-    }
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-    }
-    ul {
-      text-align: left;
+      color: #fff;
+      padding: 30px 20px;
       max-width: 500px;
-      margin: 20px auto;
-      padding-left: 20px;
+      margin: auto;
     }
-    .timer {
-      font-size: 1.5em;
-      color: #e64a19;
-      margin: 25px 0;
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 20px;
+      border: 4px solid #00ff77;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ff77;
+    }
+    .headline {
+      font-size: 20px;
       font-weight: bold;
+      background: rgba(0,0,0,0.4);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
     .btn {
       display: inline-block;
-      padding: 15px 25px;
-      font-size: 1.1em;
-      color: white;
-      background: linear-gradient(to right, #ff5722, #ff7043);
-      border-radius: 8px;
+      background: #FFD700;
+      color: #000;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 14px 30px;
+      border-radius: 50px;
       text-decoration: none;
-      margin-top: 20px;
+      border: 3px solid #ff0000;
+      margin: 20px auto;
+      transition: 0.3s;
     }
-    .footer {
-      font-size: 0.85em;
-      color: #777;
-      margin-top: 40px;
+    .btn:hover {
+      background: #ffef5a;
+      transform: scale(1.05);
+    }
+    .timer {
+      font-size: 22px;
+      color: #FF4444;
+      font-weight: bold;
+      margin-top: 10px;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .screenshot {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      margin-top: 25px;
+      box-shadow: 0 0 20px #000;
+    }
+    .footer-note {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #ddd;
     }
   </style>
-  <script>
-    let seconds = 5;
-    function startCountdown() {
-      const el = document.getElementById("countdown");
-      const timer = setInterval(() => {
-        el.textContent = seconds;
-        if (seconds <= 0) {
-          clearInterval(timer);
-          window.location.href = "https://t.me/+GU5CevkCpzphYTU1";
-        }
-        seconds--;
-      }, 1000);
-    }
-    window.onload = startCountdown;
-  </script>
 </head>
 <body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="video-bg">
+    <source src="https://cdn.coverr.co/videos/coverr-coding-on-laptop-9712/1080p.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
   <div class="container">
-    <h1>🎯 Logic Color Challenge</h1>
-    <p>Ek unique aur interesting color prediction game jo dimag ke saath-saath doston ke saath competition bhi deta hai!</p>
-    <ul>
-      <li>✅ Rozana naye challenges</li>
-      <li>✅ High score share karein</li>
-      <li>✅ Doston ke saath compete karein</li>
-      <li>✅ Sirf fun – koi paise ka wada nahi</li>
-    </ul>
-
-    <div class="timer">
-      ⏳ Redirecting in <span id="countdown">5</span> seconds...
+    <img src="https://i.imgur.com/q8c9xkx.jpeg" alt="Profile" class="profile-img" />
+    <div class="headline">
+      कौन कहता है कलर ट्रेडिंग से किस्मत नहीं बदली जा सकती?<br><b>10 दिन</b> मेरे लिंक से खेलो फिर देखो!
     </div>
-
-    <a class="btn" href="https://wa.me/911234567890?text=Start%20Game" target="_blank">🚀 Try the Game Now</a>
-
-    <p class="footer">© 2025 Logic Game India | Data Safe & Secure</p>
+    <a href="https://t.me/yourchannel" class="btn" target="_blank">📲 JOIN TELEGRAM</a>
+    <div class="timer" id="countdown">00 : 00 : 03 : 00</div>
+    <img src="https://i.imgur.com/fkQpBv9.jpeg" alt="Screenshot" class="screenshot" />
+    <div class="footer-note">Powered by Boss 💎</div>
   </div>
-</body>
-</html>
+
+  <script>
+    let seconds = 180;
+    const timer = document.getElementById('countdown');
+
+    function updateTimer() {
+      const d = Math.floor(seconds / 86400);
+      const h = Math.floor((seconds % 86400) / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      const s = seconds % 60;
+
+      timer.textContent =
+        (d < 10 ? "0" + d : d) + " : " +
+        (h < 10 ? "0" + h : h) + " : " +
+        (m < 10 ? "0" + m : m) + " : " +
+        (s < 10 ? "0" + s : s);
+
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://t.me/yourchannel";
+      }
+      seconds--;
+    }
+
+    const interval = s
